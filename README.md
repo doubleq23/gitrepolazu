@@ -1,4 +1,6 @@
 # hello-world
-hello world project repository
+Hello world project repository
 
-this is a test for committing a branch
+This is a test for committing a branch
+
+This line is added to test adding new branch
