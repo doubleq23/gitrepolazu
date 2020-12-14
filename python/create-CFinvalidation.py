@@ -1,8 +1,14 @@
 import boto3
 import time
 
+###########################################################################################
+#  https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html  #
+###########################################################################################
+
 # Set AWS profile to be used
 session = boto3.Session(profile_name='awsdevus')
+
+###########################################################################################
 
 # Create cloudFront client
 cf = session.client('cloudfront')
@@ -26,7 +32,7 @@ invalidation = cf.create_invalidation(
 print("Invalidation ID: " + invalidation['Invalidation']['Id'])
 
 
-##################################################
+###########################################################################################
 """
 # Create S3 client
 client = boto3.client('s3')
@@ -38,4 +44,4 @@ for tag in tags["TagSet"]:
         distribution_id = tag["Value"]
         break
 """
-##################################################
+###########################################################################################

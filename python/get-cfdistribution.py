@@ -1,7 +1,13 @@
 import boto3
 
+###########################################################################################
+#  https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html  #
+###########################################################################################
+
 # Set AWS profile to be used
 session = boto3.Session(profile_name='awsdevus')
+
+###########################################################################################
 
 # Create CloudFront client
 cf = session.client('cloudfront')
