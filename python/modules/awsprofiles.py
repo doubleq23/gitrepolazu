@@ -7,7 +7,8 @@ def awsprofile(i):
     }
     return switcher.get(i,"Invalid AWS Profile")
 
-def greeting(name):
-  print("Hello, " + name)
-
 #print(awsprofile("1"))
+
+####   Example   ####
+def greeting(name):
+    print("Hello, " + name)
