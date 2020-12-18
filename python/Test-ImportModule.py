@@ -1,8 +1,7 @@
 import boto3
-from modules import awsprofiles
+from modules import awsprofiles, awskeypairs
 
-awsprofiles.greeting("Lazu")
-
+#awsprofiles.greeting("Lazu")
 #aws_profile = awsprofiles.awsprofile("1")
 #print(aws_profile)
 
@@ -15,5 +14,7 @@ print("3. prodcloud")
 profileselect = input ("Enter selection number: ")
 
 aws_profile = awsprofiles.awsprofile(profileselect)
+key_path = awskeypairs.keypath(aws_profile)
 print("")
-print("Using " + aws_profile + " profile")
+print("Using profile : " + aws_profile)
+print("Using keypath : " + key_path)

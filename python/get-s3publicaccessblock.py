@@ -1,8 +1,10 @@
 import boto3
 
 # Variables & Parameters
-awsprofile='awsdevus'
-s3bucketname='ghimtest'
+#awsprofile='awsdevus'
+s3bucketname = 'ghimtest'
+awsprofile = input ("Enter Aws profile: ")
+
 
 # Set AWS profile & Connect to AWS S3 session
 session = boto3.Session(profile_name=awsprofile)
@@ -44,6 +46,6 @@ def getpublicaccessblock():
 ###     Main     ###
 ####################
 
-#getpublicaccessblock()
+getpublicaccessblock()
 #settingpublicaccessblock()
-listbucketname()
+#listbucketname()
