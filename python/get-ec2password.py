@@ -51,6 +51,7 @@ print("Using " + aws_profile + " profile")
 
 key_path = keypath(aws_profile)
 print("Decrypting password using " + key_path)
+
 # Set AWS profile to be used
 
 session = boto3.Session(profile_name=aws_profile)
