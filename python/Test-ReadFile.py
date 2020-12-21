@@ -1,12 +1,17 @@
-import csv
+f = open('ip.txt', 'r')
+print(f.read())
+f.close()
 
-with open('ip.txt', mode='r') as csv_file:
-    csv_reader = csv.DictReader(csv_file)
-    line_count = 0
-    for row in csv_reader:
-        if line_count == 0:
-            print(f'Column names are {", ".join(row)}')
-            line_count += 1
-        print(f'\t{row["name"]} works in the {row["department"]} department, and was born in {row["birthday month"]}.')
-        line_count += 1
-    print(f'Processed {line_count} lines.')
+
+def readfromfile():
+    f = open('ip.txt', 'r')
+    ip_address = [f.read()]
+    print (ip_address)
+    f.close()
+
+def readfromfile2():
+    with open("ip.txt", "r") as f:
+        ip_address = list(f)
+        #print(ip_address)
+        for ipadd in ip_address:
+            print(ipadd)
