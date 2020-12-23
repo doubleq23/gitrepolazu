@@ -16,6 +16,7 @@ def listbucketname():
     for bucket in s3.buckets.all():
         bucketname = bucket.name
         print(bucket.name)
+        yield bucketname
 
 # Set the public access block
 def settingpublicaccessblock():
@@ -47,9 +48,10 @@ def getpublicaccessblock():
 ###     Main     ###
 ####################
 
-#listbucketname()
 for bucket in s3.buckets.all():
-        s3bucketname = bucket.name
-        print(bucket.name)
-        getpublicaccessblock()
+    s3bucketname = bucket.name
+    print(bucket.name)
+    getpublicaccessblock()
+
+#listbucketname()
 #settingpublicaccessblock()
