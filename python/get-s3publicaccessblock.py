@@ -2,7 +2,7 @@ import boto3
 
 # Variables & Parameters
 #awsprofile='awsdevus'
-s3bucketname = 'ghimtest'
+#s3bucketname = 'ghimtest'
 awsprofile = input ("Enter Aws profile: ")
 
 
@@ -14,6 +14,7 @@ s3bucket = session.client('s3')
 # Print out bucket names
 def listbucketname():
     for bucket in s3.buckets.all():
+        bucketname = bucket.name
         print(bucket.name)
 
 # Set the public access block
@@ -46,6 +47,9 @@ def getpublicaccessblock():
 ###     Main     ###
 ####################
 
-getpublicaccessblock()
-#settingpublicaccessblock()
 #listbucketname()
+for bucket in s3.buckets.all():
+        s3bucketname = bucket.name
+        print(bucket.name)
+        getpublicaccessblock()
+#settingpublicaccessblock()
