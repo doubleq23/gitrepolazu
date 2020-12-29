@@ -20,9 +20,11 @@ if distributions['DistributionList']['Quantity'] > 0:
   for distribution in distributions['DistributionList']['Items']:
     print("Domain: " + distribution['DomainName'])
     print("Distribution Id: " + distribution['Id'])
-    print("Certificate Source: " + distribution['ViewerCertificate']['CertificateSource'])
+    print("Comment: " + distribution['Comment'])
+    #print("Origin Domain Name: " + distribution['Origins']['Items']['DomainName'])        <-------  This is currently NOT WORKING
+    """print("Certificate Source: " + distribution['ViewerCertificate']['CertificateSource'])
     if (distribution['ViewerCertificate']['CertificateSource'] == "acm"):
-      print("Certificate: " + distribution['ViewerCertificate']['Certificate'])
+      print("Certificate: " + distribution['ViewerCertificate']['Certificate'])"""
     print("")
 else:
   print("Error - No CloudFront Distributions Detected.") 
