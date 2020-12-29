@@ -21,7 +21,7 @@ for guessTaken in range (1, 7):
     except ValueError:
         print('You did not enter a number.')
         
-if guess ==secretNumber:
+if guess == secretNumber:
     print('Good job ' + name + '! You guessed my number in ' + str(guessTaken) + ' guesses.')
 else:
     print('Nope. The number I was thinking of was ' + str(secretNumber))
