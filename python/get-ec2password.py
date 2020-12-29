@@ -42,15 +42,14 @@ print("Select AWS profile to be used")
 print("1. awsdevus")
 print("2. awsqaus")
 print("3. prodcloud")
-profileselect = input ("Enter selection number: ")
+profileselect = input ("Enter AWS profile selection number: ")
 instance_id = input ("Enter Instance ID: ")
 
 aws_profile = awsprofile(profileselect)
-print("")
-print("Using " + aws_profile + " profile")
+
 
 key_path = keypath(aws_profile)
-print("Decrypting password using " + key_path)
+
 
 # Set AWS profile to be used
 
@@ -64,6 +63,12 @@ with open(key_path, 'r') as key_file:
 ec2_client = session.client('ec2', region)
 response = ec2_client.get_password_data(InstanceId=instance_id)
 
-print(decrypt(key_text, response['PasswordData']))
+pwd_data = decrypt(key_text, response['PasswordData'])
+
+# Output
+print("")
+print("AWS profile: " + aws_profile)
+print("AWS keypath: " + key_path)
+print("Credential : " + pwd_data)
 
 ###########################################################################################
