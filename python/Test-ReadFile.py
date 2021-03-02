@@ -14,11 +14,13 @@ def readfromfile():
         print(ip)
     f.close()
 
-with open('ip2.txt') as my_file:
-    testsite_array = my_file.readlines()
+def readfromeachline():
+    with open('/Users/macadmin/OneDrive - Monster_AD/07_github_lazu/gitrepolazu/python/ip3.txt') as my_file:
+        temp_array = my_file.readlines()
 
-for fline in testsite_array:
-    print (fline)
+    for fline in temp_array:
+        print (fline.strip())
+
 
 """
 def readfromfile2():
@@ -30,8 +32,10 @@ def readfromfile2():
 
 """
 
-#readfromfile()
-
+print("Read from csv type")
+readfromfile()
+print("Read each line")
+readfromeachline()
 
 #print(ip_address)
 #ip_address = "10.15.3.110,10.15.3.188,10.15.3.216"
