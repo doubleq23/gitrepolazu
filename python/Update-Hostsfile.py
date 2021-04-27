@@ -1,4 +1,4 @@
-import requests,os,shutil
+import requests,shutil
 
 ###  Global Parameter  ###
 
@@ -59,7 +59,7 @@ def download_hosts():
         print("Download completed")
         copy_hosts()
 
-###  Replace current hosts file with the downloaded hostsfile
+###  Replace current hosts file with the downloaded hostsfile  ###
 def copy_hosts():
     if (hosts_selected == 'PROD'):
         print("Refresh PROD")
@@ -70,4 +70,5 @@ def copy_hosts():
         shutil.copyfile (hoststempfolder + hosts_selected, hostsdest)
         print("Copy completed")
 
+###  Main Function  ###
 download_hosts()
