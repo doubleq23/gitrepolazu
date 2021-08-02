@@ -45,14 +45,12 @@ print("3. prodcloud")
 profileselect = input ("Enter AWS profile selection number: ")
 instance_id = input ("Enter Instance ID: ")
 
+# Getting selection
 aws_profile = awsprofile(profileselect)
-
-
 key_path = keypath(aws_profile)
 
 
 # Set AWS profile to be used
-
 session = boto3.Session(profile_name=aws_profile)
 
 # Read the provided private key
