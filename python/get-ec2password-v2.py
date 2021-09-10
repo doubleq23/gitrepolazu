@@ -6,9 +6,9 @@ from Crypto.Cipher import PKCS1_v1_5
 #  https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html  #
 ###########################################################################################
 
-################################################
-#####    Variables & Parameters            #####
-################################################
+#####################################################
+#####    Variables & Parameters                 #####
+#####################################################
 
 #instance_id = 'i-09cb4ca6676500e32'
 aws_region = 'us-east-1'
